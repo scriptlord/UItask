@@ -14,6 +14,7 @@ const AppContainer = styled.div`
   min-height: 100vh;
 `;
 
+
 const Header = styled.header`
   // Style for header
 `;
@@ -30,22 +31,54 @@ const accountsMock = [
   { type: 'Business Savings', amount: '$1,623', change: 4.5 },
 ];
 
-const transactionsMock = [
-  { id: 't1', service: 'Stripe', date: 'Wed, 16 Feb, 18:11', amount: '+$1,223.00' },
-  { id: 't2', service: 'Dropbox', date: 'Tue, 15 Feb, 14:24', amount: '-$200.00' },
-  { id: 't3', service: 'Zendesk', date: 'Wed, 16 Feb, 18:11', amount: '-$1,223.18' },
+// const transactionsMock = [
+//   { id: 't1', service: 'Stripe', date: 'Wed, 16 Feb, 18:11', amount: '+$1,223.00' },
+//   { id: 't2', service: 'Dropbox', date: 'Tue, 15 Feb, 14:24', amount: '-$200.00' },
+//   { id: 't3', service: 'Zendesk', date: 'Wed, 16 Feb, 18:11', amount: '-$1,223.18' },
+// ];
+
+const transactionsMock= [
+  {
+    id: 't1',
+    service: 'Stripe',
+    date: 'Wed, 16 Feb, 18:11',
+    amount: '+$1,223.00',
+    type: 'Business', // Add type property here
+  },
+  {
+    id: 't2',
+    service: 'Dropbox',
+    date: 'Tue, 15 Feb, 14:24',
+    amount: '-$200.00',
+    type: 'Equipment', // Add type property here
+  },
+  {
+    id: 't3',
+    service: 'Zendesk',
+    date: 'Wed, 16 Feb, 18:11',
+    amount: '-$1,223.18',
+    type: 'Marketing', // Add type property here
+  },
+  // ... other transactions
 ];
+
 
 const TopRow = styled.div`
   background-color: #050A1F;
   padding: 1rem;
-  height: 400px;
+  height: 550px;
   // overflow: hidden; 
 `;
 
 const AccountSummaryContainer = styled.div`
-  z-index: 2; // Make sure this z-index is higher than that of TopRow
-  position: relative; // Needed for z-index to take effect
+  display: flex;
+  justify-content: space-around;
+  // width: 100%;
+  margin-bottom: 2rem;
+  z-index: 2; 
+  top: -190px;
+  position: relative; 
+   overflow: hidden;
   // Other styles...
 `;
 
@@ -65,7 +98,9 @@ const LayoutContainer = styled.div`
   // height: 100vh; 
 `;
 
-
+const TransactionContainer = styled.div`
+  margin-top: -210px
+`;
 
 const App: React.FC = () => {
   return (
@@ -94,10 +129,13 @@ const App: React.FC = () => {
               }
           }}>
             <AccountSummaryContainer>
-              <AccountSummary />
+            {accountsMock.map((account, index) => (
+              <AccountSummary key={index} type={account.type} amount={account.amount} change={account.change} />
+              ))}
             </AccountSummaryContainer>
-         
-            <RecentTransactions transactions={transactionsMock} />
+            <TransactionContainer>
+              <RecentTransactions />
+            </TransactionContainer>
       
             </MainContent>
         </BottomRow>

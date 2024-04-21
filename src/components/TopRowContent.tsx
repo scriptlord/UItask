@@ -80,6 +80,7 @@ const IconContainer = styled.span`
   }
 `;
 
+
 const Circle = styled.div`
   display: inline-flex; // Center the icon horizontally and vertically
   align-items: center;

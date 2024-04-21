@@ -1,21 +1,14 @@
 import styled from 'styled-components';
 import { AiOutlineLineChart } from "react-icons/ai";
+import MyLineChart from './MyLineCharts';
 
 const ViewDetailsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-//   background-color: #ffffff;
-//   border: 1px solid #E4E5EB;
-//   padding: 10px 15px;
-//   cursor: pointer;
-//   transition: all 0.3s;
-//   max-width: 250px; 
 
   &:hover {
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    // background: #DFE5EF
   }
 `;
 const ButtonText = styled.span`
@@ -50,16 +43,19 @@ const ArrowIcon = styled(AiOutlineLineChart)`
 `;
 
 interface HoverContentDetailsProps {
-  onIconClick: () => void;  
+    onIconClick: () => void;  
+     isExpanded: boolean;
 }
 
-const HoverContentDetails: React.FC<HoverContentDetailsProps> = ({ onIconClick }) => {
+const HoverContentDetails: React.FC<HoverContentDetailsProps> = ({ onIconClick, isExpanded }) => {
   return (
      <ViewDetailsContainer>
-          <ButtonText>View Account Details</ButtonText>
-          <IconCircle onClick={onIconClick}>
-                <AiOutlineLineChart size="1.5rem" />
-          </IconCircle>
+          <ButtonText>View Account Details {!isExpanded }</ButtonText>
+          {!isExpanded && (
+            <IconCircle onClick={onIconClick}>
+                  <AiOutlineLineChart size="1.5rem" />
+            </IconCircle>
+          )}
       </ViewDetailsContainer>
   );
 };
