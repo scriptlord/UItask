@@ -7,7 +7,6 @@ const TabsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   background: #fff;
-//   padding-right: 5rem;
 `;
 
 interface TabProps {
@@ -24,7 +23,7 @@ const Tab = styled.div<TabProps>`
 `;
 
 const IconContainer = styled.div`
-  margin-right: 15px; // Space between icon and text
+  margin-right: 15px; 
 `;
 
 const TextContainer = styled.div`
@@ -32,8 +31,8 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 0.9rem; // Adjust the size to match your design
-  margin-bottom: 5px; // Space between title and amount
+  font-size: 0.9rem; 
+  margin-bottom: 5px; 
 `;
 
 const Amount = styled.div`
@@ -45,8 +44,8 @@ const WholeAmount = styled.span`
 `;
 
 const DecimalAmount = styled.span`
-  font-size: 1rem; // Smaller font size for the decimal part
-  opacity: 0.5; // Lower opacity for the blur effect
+  font-size: 1rem; 
+  opacity: 0.5; 
 `;
 
 const formatAmount = (amount:any) => {

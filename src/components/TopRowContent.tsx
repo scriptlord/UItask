@@ -28,27 +28,27 @@ const BalanceInfo = styled.div`
 
 const BalanceTitle = styled.div`
   color: #ffffff;
-  font-size: 1em; // Adjust the size as needed
-  opacity: 0.7; // Diminish the opacity to match the design
-  margin-bottom: 0.5rem; // Space between title and amount
+  font-size: 1em;
+  opacity: 0.7; 
+  margin-bottom: 0.5rem; 
 `;
 
 
 const TotalBalance = styled.h1`
-  font-size: 2.5em; // Adjust based on your design
+  font-size: 2.5em; 
   margin: 0;
 `;
 
 const BalanceChange = styled.div`
   display: flex;
-  align-items: flex-end; // Align the text to the baseline for the subscript effect
-  font-size: 1em; // This ensures that the main balance size is relative to this parent font-size
+  align-items: flex-end; 
+  font-size: 1em; 
   margin-left: 2rem;
   margin-bottom: 0.4rem
 `;
 
 const ActionButton = styled.button`
-  background: transparent; // Use your brand's purple color
+  background: transparent; 
   border: none;
   color: white;
   padding: 10px 15px;
@@ -71,27 +71,27 @@ const ActionsContainer = styled.div`
 `;
 
 const IconContainer = styled.span`
-  margin-right: 5px; // Adjust based on your design
+  margin-right: 5px; 
     svg {
     display: block;
     color: #A4F500; 
-    width: 20px; // Adjust the size of the icon
-    height: 20px; // Adjust the size of the icon
+    width: 20px; 
+    height: 20px; 
   }
 `;
 
 
 const Circle = styled.div`
-  display: inline-flex; // Center the icon horizontally and vertically
+  display: inline-flex; 
   align-items: center;
   justify-content: center;
   background-color: #161B2E; 
   cursor: pointer;
   margin-left: 20px;
-  border-radius: 50%; // Makes the div circular
-  padding: 10px; // You can adjust the padding to make the circle larger or smaller
+  border-radius: 50%; 
+  padding: 10px; 
   svg {
-    color: #fff; // Set the color of the icon here
+    color: #fff; 
   }
 `;
 

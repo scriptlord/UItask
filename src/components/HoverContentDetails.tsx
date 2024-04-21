@@ -27,11 +27,11 @@ const IconCircle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #5F2EF4; // or any color you want for the circle
+  background-color: #5F2EF4; 
   border-radius: 50%;
-  width: 40px; // Circle size
-  height: 40px; // Circle size
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: if you want a shadow for the circle
+  width: 40px; 
+  height: 40px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   svg {
     color: #fff;
   }

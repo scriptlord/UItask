@@ -14,7 +14,6 @@ const TransactionsContainer = styled.div`
   background: #ffffff;
   border-radius: 8px;
   padding: 20px;
-  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 47%;
 `;
 
@@ -31,7 +30,6 @@ const TitleSection = styled.div`
 `;
 
 const TransactionIcon = styled.img`
-  // Replace with your actual styles for the icon
   width: 24px;
   height: 24px;
   margin-right: 10px;
@@ -43,14 +41,14 @@ const TransactionTitle = styled.h2`
   font-size: 1.2rem;
   color: #333;
   margin-left: 10px;
-  display: inline; // Keeps the subtitle close to the title
+  display: inline; 
 `;
 
 const TransactionSubtitle = styled.span`
-  margin-left: 10px; // Adjust the spacing as needed
+  margin-left: 10px; 
   font-weight: 400;
-  color: #666; // Lighter text color for the subtitle
-  font-size: 1rem; // Smaller font size for the subtitle
+  color: #666; 
+  font-size: 1rem; 
 `;
 
 const SeeAll = styled.div`
@@ -83,15 +81,13 @@ const TransactionItem = styled.li`
   }
   &:hover {
     background-color: #F7F8FC;
-  //  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); // Deeper inset shadow for pressed effect
     transform: scale(0.98)
   }
 
 `;
 
 const ServiceIcon = styled.img`
-  // Assuming we have SVG icons, adjust the styles accordingly
-  // flex-shrink: 0;
+ 
   height: 50px;
   wiidth: 50px;
 `;
@@ -111,11 +107,11 @@ const ServiceDate = styled.div`
 `;
 
 const TransactionType = styled.span`
-  // flex-grow: 1;
+
   font-size: 0.85rem;
   background-color: #F7F8FC;
   padding: 6px 12px;
-  // border-radius: 4px;
+
 `;
 const TableWrapper = styled.div`
     padding: 0 20px;
@@ -231,19 +227,7 @@ const RecentTransactions: React.FC = () => {
         </TransactionHeader>
         <MoneyTabs/>
         <TransactionList>
-        {/* {transactionsData.map((transaction) => (
-          <TransactionItem key={transaction.id}>
-            <ServiceIcon src={transaction.icon} alt={transaction.name} />
-            <ServiceDetails>
-              <ServiceName>{transaction.name}</ServiceName>
-              <ServiceDate>{transaction.date}</ServiceDate>
-            </ServiceDetails>
-            <TransactionType>{transaction.type}</TransactionType>
-            <TransactionAmount isPositive={transaction.isPositive}>
-              {transaction.amount}
-            </TransactionAmount>
-          </TransactionItem>
-        ))} */}
+       
       </TransactionList>
       </TransactionsContainer>
     </TableWrapper>

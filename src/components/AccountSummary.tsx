@@ -14,15 +14,13 @@ interface AccountCardProps {
 
 
 const IconContainer = styled.span`
-  margin-right: 5px; // Adjust based on your design
+  margin-right: 5px;
     svg {
     display: block;
     color: #A4F500; 
-    // background: red;
-    // border-radius: 50%;
     border: none;
-    width: 20px; // Adjust the size of the icon
-    height: 20px; // Adjust the size of the icon
+    width: 20px; 
+    height: 20px; 
   }
 `;
  
@@ -35,10 +33,10 @@ const AccountCard = styled(motion.div)<AccountCardProps>`
   margin: 20px;
   position: relative;
   cursor: pointer;
-   display: flex; // Set up a flex container
-  justify-content: space-between; // Space between the columns
-  align-items: center; // Align items vertically
-  // gap: 10px;
+   display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+ 
   &:before {
     content: '';
     position: absolute;
@@ -51,7 +49,6 @@ const AccountCard = styled(motion.div)<AccountCardProps>`
     transition: background 0.3s;
   }
   &:hover:before {
-    // background: #DFE5EF; 
     background: ${props => (props.isHovered && !props.isExpanded) ? '#DFE5EF' : '#B9ABF4'};
   }
 `;
@@ -61,8 +58,8 @@ const LeftColumn = styled.div`
 
 const RightColumn = styled.div<{ isExpanded: boolean }>`
   display: ${({ isExpanded }) => (isExpanded ? 'flex' : 'none')};
-  flex-basis: 265px; // Adjust width of right column
-  flex-shrink: 0; // Prevent the right column from shrinking
+  flex-basis: 265px; 
+  flex-shrink: 0; 
 `;
 const IconLayer = styled.div`
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
@@ -88,7 +85,7 @@ const AccountName = styled.div`
 
 const ChangePercentage = styled.div`
   font-size: 1rem;
-  color: #27ae60; // Use a different color if the value is negative
+  color: #27ae60; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,7 +115,7 @@ const RightArrowContainer = styled.div<{ isExpanded: boolean; onClick: () => voi
   justify-content: center;
   position: absolute;
   top: 50%;
-  right: 0; // Adjust as necessary
+  right: 0; 
   transform: translateY(-50%);
   background-color: #F7F8FC;
   height: 110px;

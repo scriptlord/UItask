@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import AccountSummary from './components/AccountSummary';
 import RecentTransactions from './components/RecentTransactions';
-// import CustomLineChart from './CustomLineChart';
 import { motion } from 'framer-motion';
 import HeaderSection from './components/Header';
 import TopRowContent from './components/TopRowContent';
@@ -16,13 +15,12 @@ const AppContainer = styled.div`
 
 
 const Header = styled.header`
-  // Style for header
 `;
 
 const MainContent = styled.main`
   display: flex;
   flex-direction: column;
-  gap: 20px; // Adjust spacing as needed
+  gap: 20px; 
 `;
 
 const accountsMock = [
@@ -31,11 +29,6 @@ const accountsMock = [
   { type: 'Business Savings', amount: '$1,623', change: 4.5 },
 ];
 
-// const transactionsMock = [
-//   { id: 't1', service: 'Stripe', date: 'Wed, 16 Feb, 18:11', amount: '+$1,223.00' },
-//   { id: 't2', service: 'Dropbox', date: 'Tue, 15 Feb, 14:24', amount: '-$200.00' },
-//   { id: 't3', service: 'Zendesk', date: 'Wed, 16 Feb, 18:11', amount: '-$1,223.18' },
-// ];
 
 const transactionsMock= [
   {
@@ -43,23 +36,22 @@ const transactionsMock= [
     service: 'Stripe',
     date: 'Wed, 16 Feb, 18:11',
     amount: '+$1,223.00',
-    type: 'Business', // Add type property here
+    type: 'Business', 
   },
   {
     id: 't2',
     service: 'Dropbox',
     date: 'Tue, 15 Feb, 14:24',
     amount: '-$200.00',
-    type: 'Equipment', // Add type property here
+    type: 'Equipment',
   },
   {
     id: 't3',
     service: 'Zendesk',
     date: 'Wed, 16 Feb, 18:11',
     amount: '-$1,223.18',
-    type: 'Marketing', // Add type property here
+    type: 'Marketing', 
   },
-  // ... other transactions
 ];
 
 
@@ -67,7 +59,6 @@ const TopRow = styled.div`
   background-color: #050A1F;
   padding: 1rem;
   height: 550px;
-  // overflow: hidden; 
 `;
 
 const AccountSummaryContainer = styled.div`
@@ -79,23 +70,21 @@ const AccountSummaryContainer = styled.div`
   top: -190px;
   position: relative; 
    overflow: hidden;
-  // Other styles...
 `;
 
 const BottomRow = styled.div`
-  background-color: #ffffff; // White color for the bottom content row
-  flex-grow: 1; // Take up the remaining space
+  background-color: #ffffff; 
+  flex-grow: 1; 
   padding: 1rem;
-  //  margin-top: -100px; // Pull the bottom row up to overlap the top row
-  z-index: 1; // Ensure it's above the top row
-  position: relative; // Establish a positioning context
+  //  margin-top: -100px; 
+  z-index: 1; 
+  position: relative; 
   
 `;
 
 const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  // height: 100vh; 
 `;
 
 const TransactionContainer = styled.div`

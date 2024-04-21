@@ -13,21 +13,19 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-//   background-color: #2c3e50;
+
   color: white;
 `;
 
 const StyledLogo = styled.img`
-  // You can add styles for your image here if needed
-  width: 100%;  // The image will scale based on the width of its container
-  height: auto;  // The height will adjust automatically to maintain the aspect ratio
+  width: 100%;  
+  height: auto;  
   max-width: 22px;
 `;
 
 const IconContainer = styled.span`
-  display: inline-flex; // Center the icon within the IconContainer
-  color: #32384E; // Example color, change it to the color you want for the icon
-  // Add other styles if needed, such as padding, background, border, etc.
+  display: inline-flex; 
+  color: #32384E; 
 `;
 
 const LogoContainer = styled.div`
@@ -37,7 +35,7 @@ const LogoContainer = styled.div`
   cursor: pointer;
   gap: 1rem;
   svg {
-    margin-left: 8px; // Adjust the margin as necessary
+    margin-left: 8px; 
   }
 `;
 
@@ -69,16 +67,16 @@ const ActionIcons = styled.div`
 `;
 
 const ProfileImage = styled.img`
-  width: 32px; // Adjust as needed
-  height: 32px; // Adjust as needed
+  width: 32px; 
+  height: 32px; 
   border-radius: 50%;
 `;
 
 const VerticalLine = styled.div`
-  height: 24px; // Adjust to the size of your icons or container
-  width: 1px; // Thin line
-  background-color: #ffffff; // Color of the line
-  opacity: 0.15; // Adjust opacity to match your design
+  height: 24px; 
+  width: 1px; 
+  background-color: #ffffff; 
+  opacity: 0.15; 
 `;
 
 const HeaderSection = () => {

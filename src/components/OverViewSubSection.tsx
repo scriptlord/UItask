@@ -9,8 +9,8 @@ const SubSectionContainer = styled.div`
 `;
 
 const ViewTitle = styled.h2`
-  margin-right: 1rem; // Provide some space around the title
-  font-size: 1.5rem; // Adjust as per your design
+  margin-right: 1rem; 
+  font-size: 1.5rem; 
   display: flex;
   align-items: center;
 
@@ -27,15 +27,15 @@ const Circle = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #232638; // The background color for the circle, change as needed
-  border-radius: 50%; // Makes the div circular
-  width: 2em; // Sets a fixed width for the circle
-  height: 2em; // Sets a fixed height to maintain the aspect ratio
+  background-color: #232638; 
+  border-radius: 50%; 
+  width: 2em; 
+  height: 2em; 
   margin-right: 2rem;
   svg {
-    color: white; // The color of the icon
-    width: 1em; // Adjust the icon size as needed
-    height: 1em; // Adjust the icon size to maintain aspect ratio
+    color: white; 
+    width: 1em; 
+    height: 1em; 
     margin: 0 auto
   }
 `;
